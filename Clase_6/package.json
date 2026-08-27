@@ -1,11 +1,11 @@
 {
-  "name": "Clase_5",
+  "name": "Clase_6",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch index.mjs",
-    "start": "node index.mjs"
+    "dev": "node index.mjs",
+    "prac": "node practica.mjs"
   },
   "keywords": [],
   "author": "",
