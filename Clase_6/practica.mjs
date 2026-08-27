@@ -1,8 +1,11 @@
-function x(cb) {
-    const n = 1;
-    cb(n);
-}
+const productos = [
+    {
+        nombre: 'Pantalon',
+        precio: 100
+    },
+    {
+        nombre: 'Remera',
+        precio: 50
+    }
+];
 
-x((n) => {
-    console.log("Se ejecuto el CB con el valor pasado por x :" + n);
-});
