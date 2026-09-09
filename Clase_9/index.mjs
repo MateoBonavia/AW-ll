@@ -35,9 +35,30 @@ app.post("/", (req, res) => {
 });
 
 app.get("/:id", (req, res) => {
-  const user = {
-    nombre: "Mateo",
-    apellido: "Bonavia",
-  };
-  res.json(user);
+  const users = [
+    {
+      id: 1,
+      nombre: "Mateo",
+      apellido: "Bonavia",
+    },
+    {
+      id: 2,
+      nombre: "Lionel",
+      apellido: "Messi",
+    },
+  ];
+
+  const user = users.filter((u) => Number(u.id) === Number(req.params.id));
+
+  if (user.length > 0) {
+    res.status(200).json({
+      message: `Encontrado el usuario con el id ${req.params.id}`,
+      data: user,
+    });
+  } else {
+    res.status(404).json({
+      message: `Usuario con el id ${req.params.id} no encotrado`,
+      data: [],
+    });
+  }
 });
