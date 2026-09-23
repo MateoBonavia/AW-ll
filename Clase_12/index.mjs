@@ -1,4 +1,5 @@
 import express from "express";
+import { verifyKey } from "./middleware.mjs";
 
 const app = express();
 
@@ -14,15 +15,6 @@ const data = [
 app.use(express.json());
 
 // app.use(express.urlencoded({ extended: true }));
-
-const verifyKey = (req, res, next) => {
-  const key = req.body["key"];
-  if (key === "RacingCampeonCopaArgentina2026") {
-    next();
-  } else {
-    res.status(403).json({ error: "Key invalida" });
-  }
-};
 
 app.get("/estado", (req, res) => {
   res.json(data);
