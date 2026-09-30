@@ -1,0 +1,8 @@
+### Todas las franquicias
+GET http://localhost:3000/franquicias
+
+### Franquicia por id
+GET http://localhost:3000/franquicias/3
+
+### Procedimiento
+GET http://localhost:3000/procedimiento/franquicia-mas-valiosa
