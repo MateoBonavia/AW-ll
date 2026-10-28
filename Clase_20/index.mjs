@@ -26,6 +26,7 @@ app.post("/autenticacion", (req, res) => {
       httpOnly: true,
       secure: true,
       sameSite: "lax",
+      maxAge: 1000 * 10, // Milisegundos
     });
 
     return res.redirect("/admin");
